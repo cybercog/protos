@@ -1,0 +1,24 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+    <your role>: Komarev Anton
+    Site: 
+    Twitter: 
+    Location: Moscow, Russia
+
+    <your role>: Romanyuta Dmitryi
+    Site: 
+    Twitter: 
+    Location: Moscow, Russia
+
+/* THANKS */
+    Names (& URL): 
+
+/* SITE */
+    Last update: 2011/08/23
+    Language: Russian / English
+    Standards: HTML5, CSS3, JavaScript, XML
+    Components: Modernizr, jQuery, 960 Grid System, HTML5 Boilerplate
+    Software:

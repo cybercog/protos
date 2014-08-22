@@ -1,0 +1,404 @@
+<!--
+<div class="button_stack row">
+    <a href="">
+        Profile
+    </a>
+    <a href="">
+        Settings
+    </a>
+    <a href="">
+        Get out of here!
+    </a>
+</div>
+-->
+
+<input type="checkbox" />
+<input type="checkbox" />
+<input type="checkbox" checked disabled />
+<input type="checkbox" checked />
+<input type="radio" />
+<input type="radio" />
+<input type="radio" checked />
+<input type="radio" checked disabled />
+
+<form id="app-login" action="process.php">
+    <fieldset>
+        <legend>Login Details</legend> 
+        <p>
+            <label class="top" for="user-name">Username:</label>
+            <input name="user-name" type="email" placeholder="Your username is your email address" required autofocus />
+        </p>
+        <p> 
+            <label class="top" for="password">Password:</label>
+            <input name="password" class="wide" type="password" placeholder="6 digits, a combination of numbers and letters" required />
+        </p>
+        <footer>
+            <input type="submit" class="huge button purple" value="Логин" />
+            <input type="button" class="small button yellow" value="Забыли пароль" />
+        </footer>
+        
+        <footer class="action">
+            <input type="button" class="button" value="Стандартная" />
+            <input type="submit" class="button green" value="Позитив" />
+            <button class="button yellow">
+                <img src="image/attention.png" alt="att" />
+                <span>Внимание! Кнопка с картинкой!</span>
+            </button>
+            <input type="reset" class="button gigantic red" value="Негатив" disabled />
+            <a href="#" class="button prominent purple">
+                button!
+            </a>
+            <input type="button" class="button blue" value="Cиний" />
+        </footer>
+        <footer class="action ">
+            <input type="button" class="button big" value="Стандартная" />
+            <input type="submit" class="button green huge" value="Позитив" />
+            <button class="button yellow">
+                <img src="image/attention.png" alt="att" hidden />
+                <span>Внимание! Кнопка с картинкой!</span>
+            </button>
+            <input type="reset" class="button red" value="Негатив" />
+            <a href="#" class="button prominent purple">
+                button!
+            </a>
+            <input type="button" class="button blue large" value="Cиний" />
+        </footer>
+        <footer class="action" >
+            <input type="button" class="btn" value="Стандартная" />
+            <input type="submit" class="btn green" value="Позитив" />
+            <button class="btn yellow">
+                <img src="image/attention.png" alt="att" />
+                <span>Внимание! Кнопка с картинкой!</span>
+            </button>
+            <input type="reset" class="btn red" value="Негатив" />
+            <a href="#" class="btn prominent purple">
+                Button!
+            </a>
+            <input type="button" class="btn blue" value="Cиний" />
+        </footer>
+    </fieldset>
+</form>
+
+<form>
+    <p>
+        some text to stay heavy
+    </p>
+    <p>
+        and to be TRUE!
+    </p>
+    <p>
+        <label class="top" for="email">E-mail</label>
+        <input type="email" placeholder="my@email.com" /><br />
+        <input type="text" /><br />
+        <input type="tel" /><br />
+        <input type="date" /><br />
+        <input type="search" />
+    </p>
+    <p>
+        <label>write something to me</label>
+        <textarea></textarea>
+    </p>
+    <p>
+        <label class="top" for="password">Password</label>
+        <input type="password" placeholder="password" />
+    </p>
+</form>
+
+
+<div class="overall2">
+    <p>
+        <label class="top" for="cars">Select your car:</label>
+        <select id="cars" name="cars">
+            <optgroup label="Swedish Cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+            </optgroup>
+            <optgroup label="German Cars">
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </optgroup>
+        </select>
+    </p>
+    <p>
+        <label class="top" for="color">Choose your color:</label>
+        <select id="color" name="color" multiple>
+            <optgroup label="Цвет" class="color">
+                <option value="c1">Апельсиновый</option>
+                <option value="c2">Лимонный</option>
+                <option value="c3">Персиковый</option>
+            </optgroup>
+            <optgroup label="Тон" class="hue">
+                <option value="s1">Светлый</option>
+                <option value="s2">Нормальный</option>
+                <option value="s3">Темный</option>
+            </optgroup>
+        </select>
+    </p>
+</div>
+
+<form action="." method="post">
+    <h4>Example 1 (for HTML 5 browsers)</h4>
+    <p>
+        <label class="top">
+            Enter your favorite cartoon character:
+        </label>
+        <input type="text" name="favCharacter1" list="characters1" />
+        <datalist id="characters1">
+            <option value="Homer Simpson"></option>
+            <option value="b" label="Bart"></option>
+            <option value="Fred Flinstone"></option>
+        </datalist>
+    </p>
+    
+    <h4>Example 2 (for both legacy and HTML 5 browsers)</h4>
+    <p>
+        <label>
+            Enter your favorite cartoon character:<br />
+            <input type="text" name="favCharacter2" list="characters2" />
+        </label>
+        <datalist id="characters2">
+            <select name="favCharacter2">
+                <option selected disabled>Or select one from the list:</option>
+                <option label="Homer Simpson" value="hs">Homer Simpson</option>
+                <option label="Bart Simpson" value="bs">Bart</option>
+                <option label="Fred Flintstone" value="ff">Fred Flinstone</option>
+            </select>            
+        </datalist>
+    </p>
+    
+    <footer>
+        <input type="submit" class="button green" />
+    </footer>
+</form>
+
+<form action="." method="post">
+    <input type="text" autofocus />
+    <input type="url" />
+    <input type="email" />
+    <input type="password" />
+    <input type="tel" />
+    <input type="search" name="qs" results="5" autosave="search_query_here" />
+    <input type="datetime" />
+    <input type="date" />
+    <input type="month" />
+    <input type="week" />
+    <input type="time" />
+    <input type="datetime-local" />
+    <input type="number" />
+    <input type="range" />
+    <input type="color" />
+    <input type="checkbox" />
+    <input type="radio" />
+    <input type="file" />
+    <input alt="img" type="image" />
+    
+    <footer class="action">
+        <input type="button" class="button" value="Стандартная" />
+        <input type="submit" class="button green" value="Позитив" />
+        <input type="reset" class="button red" value="Негатив" />
+        <input type="button" class="button blue" value="синий" />
+        <button class="button yellow">
+            <img src="image/attention.png" alt="att" />
+            <span>Внимание! Кнопка с картинкой!</span>
+        </button>
+        <a href="#" class="button prominent purple">button!</a>
+    </footer>
+    
+    <textarea>kdjsadlksa</textarea>
+    <textarea disabled>kdjsadlksa</textarea>
+    <textarea readonly>kdjsadlksa</textarea>
+    
+    <input type="text" />
+    <input type="text" disabled />
+    <input type="text" readonly />
+    
+    <fieldset class="rating">
+        <legend>Rating:</legend>
+        <p>
+            <input id="rating-1" name="rating" type="radio" value="1" />
+            <label for="rating-1">1</label>
+            <input id="rating-2" name="rating" type="radio" value="2" />
+            <label for="rating-2">2</label>
+            <input id="rating-3" name="rating" type="radio" value="3" />
+            <label for="rating-3">3</label>
+            <input id="rating-4" name="rating" type="radio" value="4" />
+            <label for="rating-4">4</label>
+            <input id="rating-5" name="rating" type="radio" value="5" />
+            <label for="rating-5">5</label>
+        </p>
+    </fieldset>
+    
+</form>
+
+<form action="." method="post" class="noise">
+    <fieldset>
+        <legend title="Labels test">Labels test</legend>
+
+        <div class="good_example">
+            <div class="row">
+                <label class="top" for="common_label" title="Click, to focus on field.">Common label</label>
+                <input id="common_label" required tabindex="1" name="common_label" placeholder="URL" pattern="http://[a-z]+[\.][a-z]{2,6}" title="Что в тайтле надо не помню" type="url" value="" />
+                <div class="popup_hint">
+                    <p class="invalid">
+                        Fill in correct URL plz
+                    </p>
+                    <p class="valid">
+                        Thx for good URL!
+                    </p>
+                </div>
+                <p class="description">
+                    <img src="image/attention.png" style="display: inline-block; vertical-align: middle;" alt="description" title="Hint #39" />
+                    You can click on labels to focus on field with <i>id=""</i> equals to <i>for=""</i> attribute.
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="tick valid" title="Click, to check in.">
+                    <input id="checkbox_label" name="checkbox_label" type="checkbox" value="1" />
+                    <label for="checkbox_label" tabindex="4">Labelled checkbox #1</label>
+                </div>
+                <div class="tick valid" title="Click, to check in.">
+                    <input checked="checked" id="checkbox_label2" name="checkbox_label2" type="checkbox" value="2" />
+                    <label for="checkbox_label2" tabindex="2">Labelled checkbox #2</label>
+                </div>
+                <div class="tick valid" title="Click, to check in.">
+                    <input id="checkbox_label3" name="checkbox_label2" type="checkbox" value="2" />
+                    <label for="checkbox_label3" tabindex="3">Labelled checkbox #3</label>
+                </div>
+            </div>
+            <div class="row">
+                <label>Light control (radio button)</label>
+                <div class="block_set">
+                    <!-- :TODO: on UL -->
+                    <div class="yes">
+                        <input id="light_on" name="radio_label[]" type="radio" value="1" />
+                        <label class="upper" for="light_on" title="Turn on">On</label>
+                    </div>
+                    <div class="no">
+                        <input id="light_off" name="radio_label[]" type="radio" value="0" />
+                        <label class="upper" for="light_off" title="Turn off">Off</label>
+                    </div>
+                    <div class="cancel disabled">
+                        <input disabled="disabled" id="light_cancel" name="radio_label[]" type="radio" value="-1" />
+                        <label class="upper" for="light_cancel" title="Decide later">Cancel</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row bad_example">
+            <label class="top" title="I'm useless">Blind label</label>
+            <input id="blind_label" name="blind_label" placeholder="orphan field" type="text" value="" />
+            <p class="description">
+                Blind labels don't have for="" attribute <abbr title="and">&amp;</abbr> not are welcomed.
+            </p>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <label class="top" for="distributive">Выберите свой дистрибутив</label>
+        <input id="distributive" list="distributive_list" name="distributive" type="text" />
+        <datalist id="distributive_list">
+            <option value="Ubuntu">Ubuntu</option>
+            <option value="RedHat">RedHat</option>
+            <option value="Slackware">Slackware</option>
+            <option value="РосНАНО">РосНАНО</option>
+        </datalist>
+
+        <div>
+            <label class="top" for="country">Country</label>
+            <select name="country" id="country">
+                <optgroup label="Europe">
+                    <option value="UK">UK</option>
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                </optgroup>
+                <optgroup label="North America">
+                    <option value="">USA</option>
+                    <option value="">Canada</option>
+                </optgroup>
+            </select>
+        </div>
+    </fieldset>
+
+    <footer class="action">
+        <button>button iz here!</button>
+        <input class="button" type="reset" value="Отменить изменения" />
+        <input type="button" value="Просто кнопка" />
+        <input class="button" type="submit" value="Запустить тест" />
+    </footer>
+</form>
+
+<form action="." method="post">
+    <input name="normal_input" type="text" value="normal text" />
+    <input name="disabled_input" type="text" disabled="disabled" value="disabled text" />
+    <input name="readonly_input" type="text" readonly="readonly" value="read-only text" />
+    <footer class="action">
+        <input type="submit" value="Проверка!" />
+    </footer>
+</form>
+
+<form action="." method="post">
+    <fieldset>
+        <legend>Validator</legend>
+        <ul class="form">
+            <li>
+                <label for="distributive" class="top">omgnoes</label>
+                <input class="" required pattern="[a-d]+" name="distributive" type="text" />
+                <div class="popup_hint">
+                    <span class="invalid">OMGNO!</span>
+                    <span class="valid">YEZ!</span>
+                </div>
+            </li>
+            <li>
+                <label class="top">comodoro</label>
+                <textarea>omg
+                    So says the typographer Robert Bringhurst, and just as regular use of time provides rhythm in music, so regular use of space provides rhythm in typography, and without rhythm the listener, or the reader, becomes disorientated and lost.
+                </textarea>
+            </li>
+            <li>
+                <input type="submit" />
+            </li>
+        </ul>
+    </fieldset>
+</form>
+
+<aside class="debug">
+    <h1>Form debug</h1>
+    {post}
+</aside>
+
+<div class="todo">
+    <ol>
+        <li>
+            <span lang="ru">Заголовки</span> (<code>&lt;label&gt;</code>)
+        </li>
+        <li>
+            <mark><span lang="ru">Тег</span> <code>&lt;mark&gt;</code></mark>
+        </li>
+        <li>
+            <ins><span lang="ru">Тег</span> <code>&lt;ins&gt;</code></ins>
+        </li>
+        <li>
+            <del><span lang="ru">Тег</span> <code>&lt;del&gt;</code></del>
+        </li>
+        <li>
+            <span lang="ru">Размеры шрифтов</span> <code>css { font-size: x; }</code>
+        </li>
+        <li>
+            <span lang="ru">Размеры вертикального расстояния</span> <code>css { line-height: x; }</code>
+        </li>
+        <li>
+            <span lang="ru">Состояние полей</span> <code>input:invalid</code> <span lang="ru">и</span> <code>input:valid</code>
+        </li>
+        <li>
+            <span lang="ru">Тег</span> <code>&lt;kbd&gt;</code>
+        </li>
+        <li>
+            <span lang="ru">Checkbox</span> <code>&lt;input type="checkbox" /&gt;</code>
+        </li>
+        <li>
+            <span lang="ru">Radio button</span> <code>&lt;input type="radio" /&gt;</code>
+        </li>
+    </ol>
+</div>

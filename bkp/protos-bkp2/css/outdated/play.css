@@ -1,0 +1,241 @@
+del {
+	opacity: 0.5;
+}
+
+del:hover {
+	background-color: rgba( 184, 0, 0, 0.3 );
+	text-decoration: none;
+	opacity: 0.75;
+}
+
+del:active {
+	opacity: 1;
+}
+
+ins {
+	background-color: rgba( 255, 255, 153, 1 );
+}
+
+ins:hover {
+	background-color: rgba( 255, 255, 115, 1 );
+}
+
+ins:active {
+	background-color: rgba( 255, 255, 102, 1 );
+}
+
+legend {
+	font-weight: bolder;
+}
+
+fieldset {
+	border: 1px solid hsla( 188, 50%, 20%, 0.2 );
+	padding: 15px;
+}
+
+#wrapper {
+	margin: 0px auto;
+	width: 80%;
+	width: 960px;
+}
+
+body {
+	color: #444;
+}
+
+/**
+ * Forms
+ */
+
+/* Colors for form validity */
+input[type='text']:valid,
+input[type='url']:valid,
+textarea:valid,
+input.valid,
+textarea.valid {
+    background-color: darkgreen;
+    color: white;
+}
+
+input[type='text']:invalid,
+textarea:invalid,
+input.invalid,
+textarea.invalid {
+    background-color: #f0dddd;
+}
+
+input[type='url'] {
+    background: transparent url( '../image/linkback_url.gif' ) no-repeat 2px center;
+    padding-left: 25px;
+}
+
+/**
+ * Buttons
+ */
+
+/* checkbox */
+
+.button.tick {
+    background-color: #ccc;
+	/*background-color: hsla( 180, 0%, 0%, 0.07 );*/
+	display: inline-block;
+	margin-right: 5px;
+	position: relative;
+}
+
+.button.tick label {
+    border-color: #000;
+	border: 1px solid hsla( 0, 50%, 0%, 0.5 );
+    box-shadow: inset 1px 1px 0px hsla( 0, 50%, 100%, 0.2 );
+    border-radius: 2px;
+	display: inline-block;
+	padding: 5px 5px 5px 5px;
+}
+
+.ie6 .button.tick,
+.ie6 .button.tick label {
+	/* :TODO: Check FOR OLD IE BUG on inline-block (6 and 7)
+	 * 		  remove * from display attribute
+	 */
+	zoom: 1; /* trigger hasLayout */
+	*display: inline; /* once hasLayout is true, set display:inline to block element will make display:inline behave like display:inline-block */
+}
+
+.button.tick input {
+    background-color: hsla( 0, 50%, 100%, 0.5 );
+    border: 1px solid black;
+	left: 10px;
+    position: absolute;
+	top: 28%;
+    visibility: hidden;
+}
+
+.ie7 .button.tick input,
+.ie6 .button.tick input {
+    visibility: visible;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.button.tick input:default + label:after {
+    content: " *";
+    opacity: 0.7;
+}
+
+.button.tick input:default:checked + label:after {
+    content: "";
+}
+
+.button.tick input:checked + label {
+    background-color: purple;
+    color: white;
+}
+
+.button.tick input + label {
+    background-color: dimgrey;
+    color: white;
+}
+
+/* radio */
+
+.button.radio {
+	background-color: hsla( 180, 0%, 0%, 0.07 );
+	border: 1px solid currentColor;
+    border-radius: 2px;
+	display: inline-block;
+	margin-right: 5px;
+	position: relative;
+}
+
+.button.radio label {
+	display: inline-block;
+	padding: 5px 5px 5px 5px;
+	border: 0;
+}
+
+.button.radio input {
+    visibility: hidden;
+    position: absolute;
+}
+
+.button.radio .yes label {
+    background-color: hsla( 100, 70%, 40%, 0.25 );
+}
+
+.button.radio .no label {
+    background-color: hsla( 0, 90%, 50%, 0.25 );
+}
+
+.button.radio .cancel label {
+    background-color: hsla( 40, 90%, 50%, 0.25 );
+}
+
+.button.radio .yes input:checked + label {
+    background: darkgreen;
+    color: white;
+}
+
+.button.radio .no input:checked + label {
+    background: darkred;
+    color: white;
+}
+
+.button.radio .cancel input:checked + label {
+    background: orange;
+    color: white;
+}
+
+input:disabled + label {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+fieldset .row {
+    margin: 15px 0px;
+}
+
+/* Hints */
+
+fieldset .row .hint {
+    background: red;
+    position: relative;
+}
+
+fieldset .row .hint p {
+    display: none;
+}
+
+fieldset .row input:focus ~ .hint {
+    display: block;
+    position: absolute;
+    background: #eee;
+    border: 2px solid currentColor;
+    padding: 0px 10px;
+    right: 20px;
+    top: 20px;
+}
+
+fieldset .row input:valid:focus ~ .hint .valid {
+    color: green;
+    display: block;
+}
+
+fieldset .row input:invalid:focus ~ .hint .invalid {
+    color: red;
+    display: block;
+}
+
+/* xperiment
+
+label:after {
+    content: "";
+    display: block;
+}
+*/
+
+/* Debug */
+
+.debug li:nth-of-type( even ) {
+    background-color: hsla( 0, 0%, 0%, 0.1 );
+}

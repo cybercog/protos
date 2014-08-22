@@ -1,0 +1,429 @@
+/*
+@font-face {
+    font-family: yanone;
+    src: url( '../font/yanone.eot' );
+	src: local( 'Yanone' ), url( '../font/yanone.ttf' ) format( "truetype" );
+}
+*/
+
+nav { display: none }
+
+/* don't have cyrillic*/
+@font-face {
+    font-family: 'Droid Serif';
+    font-style: normal;
+    font-weight: normal;
+    src: url( '../font/DroidSerif-Regular.eot?' ) format( 'eot' ),
+         url( '../font/DroidSerif-Regular.woff' ) format( 'woff' ),
+         url( '../font/DroidSerif-Regular.ttf' ) format( 'truetype' ),
+         url( '../font/DroidSerif-Regular.svg#DroidSerif') format( 'svg' );
+}
+/**/
+
+body {
+	font: 1em/1.5 "Droid Serif", Georgia, serif; /* 16px/24px */
+	font: 1em/1.5 Georgia, serif;
+    text-rendering: optimizeLegibility; /* :FIX: SVG kerning for Webkit/Gecko */
+}
+
+
+/*	Typography presets
+	------------------	*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin: 0;
+}
+
+.gigantic {    
+    font-size: 3em;
+	letter-spacing: -0.04166em;
+    line-height: 72px;
+    margin: 24px 0 24px;
+    /*background: red;*/
+}  /* @ 48/48px with 36/12px margin | letter-spacing: -2px */
+
+.huge,
+h1 {
+	font-size: 2em;
+    line-height: 1.5;
+    margin: .75em 0 .75em;
+} /* ! 32/48px with 24/24px margin */
+
+.large,
+h2 {
+	font-size: 1.75em;
+    line-height: 1.72;
+    
+    line-height: 36px;
+    margin: 24px 0 12px;
+} /* ! 28/36px with 24/12px margin */
+
+.bigger,
+h3 {
+    font-size: 1.5em;
+    line-height: 1.25;
+    margin: 1.5833em 0 .6667em;
+    
+    line-height: 36px;
+    margin: 24px 0 12px;
+} /* ! 24/36px with 24/12px margin */
+
+.big,
+h4 {
+	font-size: 1.375em;
+    line-height: 1.1;
+    
+    line-height: 24px;
+    margin: 36px 0 12px;
+} /* ! 22/24px with 36/12px margin */
+
+h5 {
+    font-size: 1.25em;
+    line-height: 1.2;
+    margin: 1.8em 0 .6em;
+    margin: 36px 0 12px;
+} /* ! 20/24px with 36/12px margin */
+
+.enlarge,
+h6 {
+    font-size: 1.125em;
+    line-height: 1.3333; /* for opera 1.34 */
+    margin: 2em 0 .66667em; /* remove bottom margin? */
+} /* ! 18/24px with 36px/12px margin */
+
+.small,
+small {
+    font-size: 0.875em;
+    line-height: 1.72;
+} /* ! 14/24px with default/default margin */
+
+/* Block spacing
+   ------------- */
+
+dl,
+figure,
+footer,
+ol,
+p,
+pre,
+ul {
+    margin: 1.5em 0;
+}
+/*
+header + *,
+hgroup + *,
+h2 + *,
+h3 + *,
+h4 + *,
+h5 + *,
+h6 + *,
+header + div > *:first-child,
+hgroup + div > *:first-child,
+h2 + div > *:first-child,
+h3 + div > *:first-child,
+h4 + div > *:first-child,
+h5 + div > *:first-child,
+h6 + div > *:first-child,
+header + aside + *,
+hgroup + aside + *,
+h2 + aside + *,
+h3 + aside + *,
+h4 + aside + *,
+h5 + aside + *,
+h6 + aside + *,
+header + div > aside + *,
+hgroup + div > aside + *,
+h2 + div > aside + *,
+h3 + div > aside + *,
+h4 + div > aside + *,
+h5 + div > aside + *,
+h6 + div > aside + * {
+    margin-top: .5em;
+} /* incredibly crap attempt to tweak margins after headers fixme */
+
+/*
+aside > h2:first-child {
+    margin-top: .8333em;
+} /* 20px todo: check */
+/*
+aside > h3:first-child {
+    margin-top: .6em;
+} /* 12px */
+/*
+article hgroup h1 {
+    margin-bottom: .5em;
+}
+
+article hgroup h2 {
+    margin: .6667em 0 1.5em;
+}
+
+li,
+li section {
+    margin: 0;
+    padding: 0;
+}
+*/
+
+    /* Figures spacing */
+    figure.image {
+        text-align: center;
+    }
+
+    figure.image img:hover {
+        background: crimson;
+    }
+
+    figure.image {
+        padding: 1px;
+        display: inline-block;
+        background: hsla( 0, 0%, 98%, 1 );
+        border: 1px solid #bbb;
+        border-radius: 2px;
+        box-shadow: 1px 1px 0 0 hsla( 0, 0%, 0%, 0.12 );
+        margin-bottom: 34px;
+    }
+    
+    figure.image img {
+        height: 360px;
+        display: block;
+    }
+
+    figure figcaption {
+        background-color: #F5F1E5;
+        border-top: 1px solid #bbb;
+        color: #6E6750;
+        text-shadow: 1px 1px 0 hsla( 0, 0%, 100%, 0.75 );
+        padding: 5px 5px 4px;
+        display: block;
+    }
+
+/* Name me plz!
+   ------------ */
+   
+.indent:first-letter {
+    margin-left: 1.5em;
+} /* :TODO: or make it w/o :first-letter ? */
+
+/* Delimiters
+   ---------- */
+
+hr {
+    
+}
+
+/* 100%
+   ---- */
+
+pre {
+    margin: 0;
+}
+
+article p {
+    margin-top: 0;
+    margin-bottom: 1em;
+    -moz-hyphens: auto;
+    -o-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+/*
+p {
+   margin-bottom: 0 }
+   
+p + p:before { 
+  content: "2767"; 
+  padding-right: 0.4em;
+  margin-top:0 }
+  */
+
+blockquote {
+    margin: 0 1em 1em;
+}
+
+    blockquote blockquote {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* verse (стих) */
+
+    .verse { /* or blockquote.verse ? */
+        text-align: center;
+    }
+
+    .verse pre {
+        display: inline-block;
+        font-family: inherit;
+        text-align: left;
+        white-space: pre; /* ??? */
+    }
+
+    .verse cite { /* ??? */
+        display: block;
+        margin-top: 1em;
+    }
+    
+    /* Quote */
+    
+    /* for two levels of nested quotations */
+    q { quotes: '“' '”' '‘' '’'; }
+    
+    /* extra content definitions for pre-2011 WebKit */
+    q:before { content: '“'; content: open-quote; }
+    q:after { content: '”'; content: close-quote; }
+    q q:before { content: '‘'; content: open-quote; }
+    q q:after { content: '’'; content: close-quote; }
+    
+    /* q in blockquote */
+    blockquote q:before { content: '‘'; content: open-quote; }
+    blockquote q:after { content: '’'; content: close-quote; }
+    blockquote q q:before { content: '“'; content: open-quote; }
+    blockquote q q:after { content: '”'; content: close-quote; }
+    
+    /* blockquote hanging opening quote */
+    /* 
+    blockquote:before { display: block; height: 0; content: "“"; margin-left: -.95em; font: italic 400%/1 Cochin,Georgia,"Times New Roman",serif; color: #999; }
+     */ 
+    
+    /* alternative blockquote style */
+    /*
+    blockquote { quotes: '“' '”'; }
+    blockquote p:before { content: '“'; content: open-quote; }
+    blockquote p:after { content: ''; content: no-close-quote; }
+    blockquote p:last-child:after { content: '”'; content: close-quote; }
+    */
+    
+    /* quotes for French, German (two kinds) and Japanese */
+    :lang(fr) > q,
+    :lang(ru) > q { quotes: '« ' ' »' '“' '”'; }
+    :lang(de) > q { quotes: '„' '“' '‚' '‘'; }
+    :lang(de) > q { quotes: '»' '«' '›' '‹'; } /* alternative style */
+    :lang(ja) > q { quotes: '「' '」' '『' '』'; }
+
+/* Code
+   ---- */
+
+.codebox code {
+    white-space: pre-wrap;
+}
+
+/* Ordered & unordered lists
+   ------------------------- */
+
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+/* Positioning
+   ----------- */
+
+.left { 
+    float: left;
+    margin: 0 1em 1em 0;
+}
+
+.right { 
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+/* Figure
+   ------ */
+
+figure {
+    margin-bottom: 1em;
+    position: relative;
+}
+
+figcaption {
+    
+}
+
+/* Definition lists
+   ---------------- */
+
+dl.lst {
+    margin: .5em 0 30px 0;
+    font-size: .9em;
+}
+
+dl.lst dt,
+dl.lst dt a {	
+    font-weight: bold;
+}
+
+dl.lst dd {	
+    margin: 0 0 1em 0;
+}
+
+dl.lst dd em {	
+    display: block;
+    color: rgba( 78, 68, 60, .5 );
+}
+
+
+
+
+
+
+
+
+/* DELETE
+   ------ */
+
+body {
+    background-image: url( "../image/square_24.gif" );
+}
+
+blockquote,
+.verse pre {
+    background-color: hsla( 100, 50%, 50%, .25 );
+}
+
+/*
+.gigantic, h1, h2, h3, h4, h5, h6, small {
+    background: hsla( 0, 0%, 0%, 0.1 );
+}
+
+p {
+    background: hsla( 200, 50%, 50%, 0.1 );
+}
+*/
+
+
+.callout {
+    background: hsla( 300, 50%, 50%, .1 );
+}
+
+.banner {
+    background-attachment: scroll !important;
+    background-clip: border-box !important;
+    background-color: transparent !important;
+    background-image: url( "../image/banner_typo.png" ) !important;
+    background-origin: padding-box !important;
+    background-position: 50% 52% !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% auto !important;
+    height: 0 !important;
+    padding-bottom: 25%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10%;
+}
+
+.banner, .banner h1 {
+	width: 100% !important;
+}
+
+.banner h1 {
+    display: none;
+}
+
+h1 {
+    padding: 12px 0; /* ??? em */
+}

@@ -1,0 +1,211 @@
+/*
+@font-face {
+    font-family: yanone;
+    src: url( '../font/yanone.eot' );
+	src: local( 'Yanone' ), url( '../font/yanone.ttf' ) format( "truetype" );
+}
+*/
+/* don't have cyrillic
+@font-face {
+    font-family: 'Droid Serif';
+    font-style: normal;
+    font-weight: normal;
+    src: url( '../font/DroidSerif-Regular.eot?' ) format( 'eot' ),
+         url( '../font/DroidSerif-Regular.woff' ) format( 'woff' ),
+         url( '../font/DroidSerif-Regular.ttf' ) format( 'truetype' ),
+         url( '../font/DroidSerif-Regular.svg#DroidSerif') format( 'svg' );
+}
+*/
+
+body {
+	font: 16px/24px 'Droid Serif', Georgia, serif;
+	font: 16px/1.5 yanone, 'Droid Serif', Georgia, serif;
+	font: 16px/1.5 'Droid Serif', Georgia, serif;
+}
+
+/*	Typography presets
+	------------------	*/
+
+h1, h2, h3, h4, h5, h6, .gigantic {
+    margin: 0;
+    margin-bottom: 24px;
+}
+
+.gigantic {
+	font-size: 110px;
+	line-height: 120px;
+	letter-spacing: -2px;
+}
+
+.huge, h1 {
+	font-size: 68px;
+	line-height: 72px;
+	letter-spacing: -1px;
+}
+
+.large, h2 {
+	font-size: 42px;
+	line-height: 48px;
+}
+
+.bigger, h3 {
+	font-size: 26px;
+	line-height: 36px;
+	line-height: 48px;
+}
+
+.big, h4 {
+	font-size: 22px;
+	line-height: 30px;
+}
+
+.small, small {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.smaller, h5 {
+    font-size: 11px;
+    line-height: 18px;
+}
+
+.tiny, h6 {
+    font-size: 9px;
+    line-height: 18px;
+}
+
+hr {
+    
+}
+
+/* 100%
+   ---- */
+
+pre {
+    margin: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+blockquote {
+    margin: 0 24px 24px;
+}
+
+    blockquote blockquote {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* verse (стих) */
+
+    .verse { /* or blockquote.verse ? */
+        text-align: center;
+    }
+
+    .verse pre {
+        display: inline-block;
+        font-family: inherit;
+        text-align: left;
+        white-space: pre; /* ??? */
+    }
+
+    .verse cite { /* ??? */
+        display: block;
+        margin-top: 24px;
+    }
+
+/* Code
+   ---- */
+
+.codebox code {
+    white-space: pre-wrap;
+}
+
+/* Ordered & unordered lists
+   ------------------------- */
+
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+/* Positioning
+   ----------- */
+
+.left { 
+    float: left;
+    margin: 0 24px 24px 0;
+}
+
+.right { 
+    float: right;
+    margin: 0 0 24px 24px;
+}
+
+/* Figure
+   ------ */
+
+figure {
+    margin-bottom: 24px;
+}
+
+figcaption {
+    
+}
+
+/* Definition lists
+   ---------------- */
+
+dl.lst {
+    margin: .5em 0 30px 0;
+    font-size: .9em;
+}
+
+dl.lst dt,
+dl.lst dt a {	
+    font-weight: bold;
+}
+
+dl.lst dd {	
+    margin: 0 0 1em 0;
+}
+
+dl.lst dd em {	
+    display: block;
+    color: rgba(78, 68, 60, 0.5);
+}
+
+
+
+
+
+
+
+
+/* DELETE
+   ------ */
+
+body {
+    background-image: url( '../image/square_24.gif' );
+}
+
+blockquote,
+.verse pre {
+    background-color: hsla( 100, 50%, 50%, 0.25 );
+}
+
+.gigantic, h1, h2, h3, h4, h5, h6, small {
+    background: hsla( 0, 0%, 0%, 0.1 );
+}
+
+p {
+    background: hsla( 200, 50%, 50%, 0.1 );
+}
+
+.callout {
+    background: hsla( 300, 50%, 50%, 0.1 );
+}

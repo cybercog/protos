@@ -1,0 +1,368 @@
+/* tags: datalist, select, option */
+/* types: color, file, image, checkbox, radio */
+
+/* box-sizing ??? */
+
+/* narrow < wide < wider =||= tall < taller */
+
+/* Fields
+   ------ */
+
+    /* Active state */
+
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="email"],
+    input[type="month"],
+    input[type="number"],
+    input[type="password"],
+    input[type="range"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="text"],
+    input[type="time"],
+    input[type="url"],
+    input[type="week"],
+    select,
+    textarea { /* :TODO: optimize? remove input types */
+        background-color: hsla( 0, 0%, 98%, 1 );
+        border: .1875em solid hsla( 0, 0%, 75%, 1 ); /* 3px */
+        border-radius: 2px;
+        box-shadow: 0 2px hsla( 0, 0%, 0%, .07 ) inset, /* top inside shadow */
+                    0 2px hsla( 0, 0%, 0%, .1 ); /* outer shadow */
+        
+        height: 2.375em; /* 24px content-box + 6px border + 8px padding  */
+        margin: .3125em 0; /* 5px 0 */
+        padding: .25em; /* 4px */
+        line-height: 1.5;
+    }
+    
+    select[multiple] {
+        height: auto;
+    }
+
+    textarea {
+        min-height: 3.875em; /* 48px content-box + 6px border + 8px padding  */
+        line-height: 1.5;
+        width: 100%;
+    }
+    
+    .oldie textarea {
+        height: 3.875em;
+    }
+
+    input[type="date"]:focus,
+    input[type="datetime"]:focus,
+    input[type="datetime-local"]:focus,
+    input[type="email"]:focus,
+    input[type="month"]:focus,
+    input[type="number"]:focus,
+    input[type="password"]:focus,
+    input[type="range"]:focus,
+    input[type="search"]:focus,
+    input[type="tel"]:focus,
+    input[type="text"]:focus,
+    input[type="time"]:focus,
+    input[type="url"]:focus,
+    input[type="week"]:focus,
+    select:focus,
+    textarea:focus {
+        background-color: hsla( 200, 50%, 95%, 1 );
+        border-color: hsla( 200, 40%, 60%, 1 );
+    }
+
+    /* Inactive state
+       :TODO: checkbox (only disabled?), radio (only disabled?), bg & font color */
+
+    input[disabled],
+    select[disabled],
+    textarea[disabled] {
+        background-color: hsla( 0, 0%, 90%, 1 );
+        /* add color */
+    }
+    
+    input[readonly],
+    textarea[readonly] {
+        background-color: hsla( 0, 0%, 50%, 1 );
+        border-color: hsla( 0, 0%, 65%, 1 );
+        color: hsla( 0, 0%, 100%, 1 );
+    }
+
+    input[readonly]:focus,
+    textarea[readonly]:focus {
+        background-color: hsla( 0, 0%, 30%, 1 );
+        border-color: hsla( 0, 0%, 45%, 1 );
+    }
+    
+    /* Specified inline icons */
+    
+    input[type="email"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="text"],
+    input[type="url"] {
+        background-repeat: no-repeat;
+        background-position: .25em center; /* 4px center */
+        padding-left: 1.5em; /* 24px */
+    }
+
+    input[type="email"] {
+        background-image: url( "../image/input_email.png" );
+    }
+
+    input[type="password"] {
+        background-image: url( "../image/input_password.png" );
+    }
+
+    input[type="search"] {
+        background-image: url( "../image/input_search.png" );
+    }
+
+    input[type="tel"] {
+        background-image: url( "../image/input_tel.png" );
+    }
+
+    input[type="text"] {
+        background-image: url( "../image/input_text.png" );
+    }
+
+    input[type="url"] {
+        background-image: url( "../image/input_url.gif" );
+    }
+    
+/* Lists
+   ----- */
+   
+    
+    
+
+/* Labels
+   ------ */
+
+    /* Checked state */
+
+    input[type="checkbox"]:checked+label,
+    input[type="radio"]:checked+label {
+        border-bottom-style: solid;
+    }
+    
+    /* Positioning */
+    
+    label.top:after { /* :TODO: top >>> ontop || on_top || above \m/ won't work on webkit! */
+        content: "";
+        display: table;
+    }
+
+    label[for]:hover { /* ??? move to normalize, choose color */
+        color: crimson;
+        border-bottom-style: solid;
+    }
+    
+    /* Rating (Remove. Just playing) */
+    
+    .rating input[type="radio"] {
+        position:absolute;
+        visibility: hidden;
+    }
+    
+    .rating label {
+        background: url( "../image/show-hide-icons.png" ) no-repeat 0 0;
+        border: 0;
+        content: "";
+        display: inline-block;
+        height: 14px;
+        width: 14px;
+    }
+    
+    .rating input[type="radio"]:checked~label,
+    .rating input[type="radio"]:hover~label,
+    .rating label:hover,
+    .rating label:hover~label {
+        background-position: -14px 0;
+    }
+    
+    .rating input[type="radio"]:checked+label {
+        background-position: 0 0;
+    }
+
+
+/* Validation
+   ---------- */
+   
+   /* Highlighting required fields */
+   
+    input.validated:required:invalid,
+    .no-js input:focus:required:invalid {
+        background-color: hsla( 0, 50%, 95%, 1 );
+        border-color: crimson;
+    }
+
+    input[type="text"]:focus:not([pattern]):required:invalid {
+        background-image: url( "../image/attention.png" );
+        background-repeat: no-repeat;
+        background-position: 95% center;
+    }
+
+    input:required:valid {
+        background-color: hsla( 100, 50%, 95%, 1 );
+        border-color: green;
+    }
+
+    /* Hints */
+
+    .popup_hint {
+        background: red;
+        color: #fff;
+        display: none;
+        /*font-size: 12px;*/
+        padding: 3px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        width: 150px;
+
+        -moz-box-shadow: 0 0 4px #ffffff;
+        -webkit-box-shadow: 0 0 4px #ffffff;
+        box-shadow: 0 0 4px #ffffff;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    input:focus + .popup_hint {
+        display: block;
+    }
+
+    input:focus:required:valid + .popup_hint {
+        background: green;
+    }
+
+    input:focus:required:valid + .popup_hint .invalid {
+        display: none;
+    }
+
+    input:focus:required:invalid + .popup_hint .valid {
+        display: none;
+    }
+
+
+/* Button
+   ------ */
+
+button>* {
+    vertical-align: middle;
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button,
+.button {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    display: inline-block;
+    height: 1.5em;
+    line-height: 1.5;
+    margin: .375em 0; /* 6px 0 */
+    padding: .375em .75em;  /* 6px 12px */
+    vertical-align: middle;
+}
+
+.button {
+    background-color: hsla( 0, 0%, 75%, 1 );
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0 2px hsla( 0, 0%, 0%, .1 ), /* bottom shadow */
+                0 1px hsla( 0, 0%, 0%, .15 ) inset, /* top dark outline */
+                0 2px hsla( 0, 0%, 100%, .2 ) inset, /* top light inline */
+                1px 0 hsla( 0, 0%, 0%, .1 ) inset, /* left dark outline */
+                -1px 0 hsla( 0, 0%, 0%, .1 ) inset, /* right dark outline */
+                0 -2px hsla( 0, 0%, 0%, .15 ) inset; /* bottom dark inline */
+    color: hsla( 0, 0%, 0%, .6 ) !important;
+    position: relative;
+    text-decoration: none;
+    text-shadow: 0 1px 0 hsla( 0, 0%, 100%, .3 );
+}
+
+.button:active {
+    box-shadow: 0 0 hsla( 0, 0%, 0%, .1 ), /* bottom shadow */
+                0 1px hsla( 0, 0%, 0%, .15 ) inset, /* top dark outline */
+                0 2px hsla( 0, 0%, 100%, .2 ) inset, /* top light inline */
+                1px 0 hsla( 0, 0%, 0%, .1 ) inset, /* left dark outline */
+                -1px 0 hsla( 0, 0%, 0%, .1 ) inset, /* right dark outline */
+                0 -2px hsla( 0, 0%, 0%, .15 ) inset, /* bottom dark inline */
+                0 0 24px hsla( 0, 0%, 0%, .1 ) inset !important; /* inner glow */
+    top: 2px;
+}
+
+.button:focus {
+    outline: 0; /* ??? */
+}
+
+.button:hover {
+    box-shadow: 0 2px hsla( 0, 0%, 0%, .1 ), /* bottom shadow */
+                0 1px hsla( 0, 0%, 0%, .15 ) inset, /* top dark outline */
+                0 2px hsla( 0, 0%, 100%, .2 ) inset, /* top light inline */
+                1px 0 hsla( 0, 0%, 0%, .1 ) inset, /* left dark outline */
+                -1px 0 hsla( 0, 0%, 0%, .1 ) inset, /* right dark outline */
+                0 -2px hsla( 0, 0%, 0%, .15 ) inset, /* bottom dark inline */
+                0 0 24px hsla( 0, 0%, 100%, .35 ) inset; /* inner glow */
+}
+
+    /* Color */
+
+    .button.green { /* ok | yes */
+        background-color: hsla( 85, 40%, 60%, 1 );
+    }
+
+    .button.red { /* warning | no */
+        background-color: hsla( 10, 75%, 65%, 1 );
+    }
+
+    .button.yellow { /* attention | later */
+        background-color: hsla( 50, 75%, 60%, 1 );
+    }
+
+    .button.blue { /* bluuuuue | maybe */
+        background-color: hsla( 200, 40%, 60%, 1 );
+    }
+
+    .button.purple { /* cancel ? :} */
+        background-color: hsla( 260, 30%, 65%, 1 );
+    }
+    
+    /* custom radio && checkbox */
+    
+    /*
+    #foo:checked::before,
+    input[type="checkbox"] {
+        position:absolute;
+        clip: rect( 0, 0, 0, 0 );
+        clip: rect( 0 0 0 0 );
+    }
+
+    #foo:checked,
+    input[type="checkbox"] + label::before {
+        content: url( "checkbox.png" );
+    }
+
+    input[type="checkbox"]:checked + label::before {
+        content: url( "checkbox-checked.png" );
+    }
+    */
+
+/*
+fieldset legend {
+    display: block;
+    padding-left: 50px;
+    font-size: 1.5em;
+    line-height: 1;
+    color: #404040;
+    *padding: 0 0 5px 145px;
+    *line-height: 1.5;
+}
+*/

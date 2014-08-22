@@ -1,0 +1,136 @@
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir {
+    background-repeat: no-repeat;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+}
+
+.ir br {
+    display: none;
+}
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visually_hidden {
+    border: 0;
+    clip: rect( 0 0 0 0 );
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visually_hidden.focusable:active,
+.visually_hidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+    visibility: hidden;
+}
+
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
+
+.block_set:after,
+.block_set:before,
+.row:after,
+.row:before {
+    content: "";
+    display: table;
+}
+
+.block_set:after,
+.row:after {
+    clear: both;
+}
+
+.block_set,
+.row {
+    zoom: 1;
+}
+
+.block_set>*,
+.block_set.left>* {
+    float: left;
+}
+
+.block_set.right>* {
+    float: right;
+}
+
+/* Auto block splitter */
+
+/* one item */
+.splitter li:first-child:nth-last-child(1) {
+    width: 100%;
+}
+
+/* two items */
+.splitter li:first-child:nth-last-child(2),
+.splitter li:first-child:nth-last-child(2) ~ li {
+    width: 50%;
+}
+
+/* three items */
+.splitter li:first-child:nth-last-child(3),
+.splitter li:first-child:nth-last-child(3) ~ li {
+    width: 33.3333%;
+}
+
+/* four items */
+.splitter li:first-child:nth-last-child(4),
+.splitter li:first-child:nth-last-child(4) ~ li {
+    width: 25%;
+}
+
+/* Cursor behavior */
+
+.help {
+    cursor: help;
+}
+
+/* Text transformation */
+
+.caps { /* .capitalize */
+    text-transform: capitalize;
+}
+
+.lowercase {  /* .lower || .lcase || .lc */
+    text-transform: lowercase;
+}
+
+.uppercase { /* .upper || .ucase || .uc */
+	text-transform: uppercase;
+}
+
+/* NOTHING DELETE ME! */
+
+.bg {
+    background-color: crimson;
+}
+
+/* ??? normalize */

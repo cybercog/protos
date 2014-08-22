@@ -1,0 +1,50 @@
+.wrapper {
+    margin: 0px auto;
+    width: 992px;
+}
+
+body {
+    margin: 0px auto;
+}
+
+nav {
+    background-color: #f1f1f1;
+    border-width: 0px 1px 1px 1px;
+    border-color: #aaa;
+    border-style: solid;
+    border-radius: 0 0 2px 2px;
+    margin-bottom: 23px;
+    word-wrap: nowrap;
+    font-size: 12px;
+    line-height: 2;
+    width: 100%;
+}
+
+nav li a {
+    padding: 0 7px;
+}
+
+nav li:hover {
+    background-color: #fefefe;
+}
+
+nav li:first-child {
+    margin-left: 0;
+}
+
+nav li:last-child {
+    margin-right: 0;
+}
+
+/* Foot */
+
+.debug {
+    background: hsla( 0, 0%, 0%, 0.1 );
+}
+
+.copyright {
+    background-color: white;
+    width: 100%;
+    /*padding: 5px;*/
+    text-align: center;
+}

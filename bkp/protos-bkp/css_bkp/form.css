@@ -1,0 +1,10 @@
+input[type='url'] {
+    background: transparent url( '../image/linkback_url.gif' ) no-repeat 2px center;
+    padding-left: 25px;
+}
+
+/*
+label+input {
+    display: block;
+}
+*/

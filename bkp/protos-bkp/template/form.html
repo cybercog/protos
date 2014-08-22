@@ -1,0 +1,215 @@
+<div class="button_stack row">
+    <a href="">
+        Profile
+    </a>
+    <a href="">
+        Settings
+    </a>
+    <a href="">
+        Get out of here!
+    </a>
+</div>
+
+<form action="." method="post">
+    <fieldset>
+        <legend accesskey="l" title="Labels test">Labels test</legend>
+        
+        <div class="good_example">
+            <div class="row">
+                <div>
+                    <label for="common_label" class="top" title="Click, to focus on field.">Common label</label>
+                    <input id="common_label" required tabindex="1" name="common_label" placeholder="URL" pattern="http://[a-z]+" title="Что в тайтле надо не помню" type="url" value="" />
+                    <div class="popup_hint">
+                        <p class="invalid">
+                            Fill in correct URL plz
+                        </p>
+                        <p class="valid">
+                            Thx for good URL!
+                        </p>
+                    </div>
+                    <p class="hint">
+                        <img src="" alt="hint" title="Hint #39" />
+                        You can click on labels to focus on field with <i>id=""</i> equals to <i>for=""</i> attribute.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="button tick valid" title="Click, to check in.">
+                    <input id="checkbox_label" name="checkbox_label" type="checkbox" value="1" />
+                    <label for="checkbox_label" tabindex="4">Labelled checkbox #1</label>
+                </div>
+                <div class="button tick valid" title="Click, to check in.">
+                    <input checked="checked" id="checkbox_label2" name="checkbox_label2" type="checkbox" value="2" />
+                    <label for="checkbox_label2" tabindex="2">Labelled checkbox #2</label>
+                </div>
+                <div class="button tick valid" title="Click, to check in.">
+                    <input id="checkbox_label3" name="checkbox_label2" type="checkbox" value="2" />
+                    <label for="checkbox_label3" tabindex="3">Labelled checkbox #3</label>
+                </div>
+                
+                <div class="hint">
+                    <p class="invalid">
+                        Fill in correct URL plz
+                    </p>
+                    <p class="valid">
+                        Thx for good URL!
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <label>Light control (radio button)</label>
+                <div class="block_set button radio valid">
+                    <!-- :TODO: on UL -->
+                    <div class="yes">
+                        <input id="light_on" name="radio_label[]" type="radio" value="1" />
+                        <label class="upper" for="light_on" title="Turn on">On</label>
+                    </div>                                    
+                    <div class="no">
+                        <input id="light_off" name="radio_label[]" type="radio" value="0" />
+                        <label class="upper" for="light_off" title="Turn off">Off</label>
+                    </div>                                    
+                    <div class="cancel disabled">
+                        <input disabled="disabled" id="light_cancel" name="radio_label[]" type="radio" value="-1" />
+                        <label class="upper" for="light_cancel" title="Decide later">Cancel</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bad_example row">
+            <div>
+                <label title="I'm useless">Blind label</label>
+            </div>
+            <div>
+                <input id="blind_label" name="blind_label" placeholder="orphan field" type="text" value="" />
+            </div>
+            <div>
+                <em>Blind labels don't have for="" attribute <abbr title="and">&amp;</abbr> not are welcomed.</em>
+            </div>
+        </div>
+    </fieldset>
+    
+    <fieldset>
+        <label class="top" for="distributive">Выберите свой дистрибутив</label>
+        <input id="distributive" list="distributive_list" name="distributive" type="text" />
+        <datalist id="distributive_list">
+            <option value="Ubuntu">Ubuntu</option>
+            <option value="RedHat">RedHat</option>
+            <option value="Slackware" />
+            <option value="РосНАНО" />
+        </datalist>
+        
+        <div>
+            <label for="country">Country</label>
+            <select name="country" id="country">
+            <optgroup label="Europe">
+                <option value="UK">UK</option>
+                <option value="Germany">Germany</option>
+                <option value="France">France</option>
+            </optgroup>
+            <optgroup label="North America">
+                <option value="">USA</option>
+                <option value="">Canada</option>
+            </optgroup>
+            </select>
+        </div>
+    </fieldset>
+    
+    <footer>
+        <input class="button" type="reset" value="Отменить изменения" />
+        <input type="button" value="Просто кнопка" />
+        <input class="button" type="submit" value="Запустить тест" />
+    </footer>
+</form>
+
+<form action="." method="post">
+    <fieldset>
+        <legend>Validator</legend>
+        <ul class="form">
+            <li>
+                <label for="distributive" class="top">omgnoes</label>
+                <input class="" required pattern="[a-d]+" name="distributive" type="text" />
+                <div class="popup_hint">
+                    <span class="invalid">OMGNO!</span>
+                    <span class="valid">YEZ!</span>
+                </div>
+            </li>
+            <li>
+                <label class="top">comodoro</label>
+                <textarea>omg
+                    So says the typographer Robert Bringhurst, and just as regular use of time provides rhythm in music, so regular use of space provides rhythm in typography, and without rhythm the listener, or the reader, becomes disorientated and lost.
+                </textarea>
+            </li>
+            <li>
+                <input type="submit" />
+            </li>
+        </ul>
+    </fieldset>
+</form>
+
+<form action="." method="post">
+    <fieldset style="background: rgba( 124, 150, 124, 0.8 );">
+        <legend>Login Details</legend> 
+        <div class="bbuton">
+            <a class="big" href="#">Tags</a>
+            <img src="" alt="v" />
+            <ul>
+                <li>ddown</li>
+                <li>action</li>
+                <li>#3</li>
+            </ul>
+        </div>
+        <div class="left">
+            <label class="top" for="username">Username:</label>
+            <input name="username" id="username" type="email" placeholder="Your username is your email address" required="required" autofocus="" />
+        </div>
+        <div class="left">
+            <label class="top" for="password">Password:</label>
+            <input name="password" id="password" type="password" placeholder="6 digits, a combination of numbers and letters" required />
+        </div>
+        <div> 
+            <input class="button big" name="login" type="submit" value="Login"> 
+        </div>
+    </fieldset>
+</form>
+
+<aside class="debug">
+    <h1>Form debug</h1>
+    {post}
+</aside>
+
+<div class="todo">
+    <ol>
+        <li>
+            <span lang="ru">Заголовки</span> (<code>&lt;label&gt;</code>)
+        </li>
+        <li>
+            <mark><span lang="ru">Тег</span> <code>&lt;mark&gt;</code></mark>
+        </li>
+        <li>
+            <ins><span lang="ru">Тег</span> <code>&lt;ins&gt;</code></ins>
+        </li>
+        <li>
+            <del><span lang="ru">Тег</span> <code>&lt;del&gt;</code></del>
+        </li>
+        <li>
+            <span lang="ru">Размеры шрифтов</span> <code>css { font-size: x; }</code>
+        </li>
+        <li>
+            <span lang="ru">Размеры вертикального расстояния</span> <code>css { line-height: x; }</code>
+        </li>
+        <li>
+            <span lang="ru">Состояние полей</span> <code>input:invalid</code> <span lang="ru">и</span> <code>input:valid</code>
+        </li>
+        <li>
+            <span lang="ru">Тег</span> <code>&lt;kbd&gt;</code>
+        </li>
+        <li>
+            <span lang="ru">Checkbox</span> <code>&lt;input type="checkbox" /&gt;</code>
+        </li>
+        <li>
+            <span lang="ru">Radio button</span> <code>&lt;input type="radio" /&gt;</code>
+        </li>
+    </ol>
+</div>

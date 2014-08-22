@@ -1,0 +1,303 @@
+/* GENERAL */
+
+.grid_12 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid_12 .cell {
+    display: inline;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+    position: relative;
+    
+    background: hsla( 0, 0%, 0%, 0.2 );
+    font: 12px arial;
+    color: white;
+    overflow: hidden;
+}
+
+.cell .cell:first-child,
+.cell.alpha {
+    margin-left: 0;
+}
+
+.cell .cell:last-child,
+.cell.omega {
+    margin-right: 0;
+}
+
+.grid_12 .width_1 { width:6.333%; }
+.grid_12 .width_2 { width:14.667%; }
+.grid_12 .width_3 { width:23.0%; }
+.grid_12 .width_4 { width:31.333%; }
+.grid_12 .width_5 { width:39.667%; }
+.grid_12 .width_6 { width:48.0%; }
+.grid_12 .width_7 { width:56.333%; }
+.grid_12 .width_8 { width:64.667%; }
+.grid_12 .width_9 { width:73.0%; }
+.grid_12 .width_10 { width:81.333%; }
+.grid_12 .width_11 { width:89.667%; }
+.grid_12 .width_12 { width:98.0%; }
+
+
+/* Sub-column Adjustments------------------------*/
+.grid_12 .width_8 .width_4.alpha { width:48.2%; margin-right: 1.5%; }
+.grid_12 .width_8 .width_4.omega { width:48.2%; margin-left: 1.5%; }
+.grid_12 .width_8 .width_6.alpha { width:48.5%; margin-right: 1.5%; }
+.grid_12 .width_8 .width_6.omega { width:48.5%; margin-left: 1.5%; }
+
+
+
+
+/* Prefix, Suffix, Push, Pull------------------------*/
+.grid_12 .prefix_1 { padding-left:8.333%; }
+.grid_12 .prefix_2 { padding-left:16.667%; }
+.grid_12 .prefix_3 { padding-left:25.0%; }
+.grid_12 .prefix_4 { padding-left:33.333%; }
+.grid_12 .prefix_5 { padding-left:41.667%; }
+.grid_12 .prefix_6 { padding-left:50.0%; }
+.grid_12 .prefix_7 { padding-left:58.333%; }
+.grid_12 .prefix_8 { padding-left:66.667%; }
+.grid_12 .prefix_9 { padding-left:75.0%; }
+.grid_12 .prefix_10 { padding-left:83.333%; }
+.grid_12 .prefix_11 { padding-left:91.667%; }
+
+.grid_12 .suffix_1 { padding-right:8.333%; }
+.grid_12 .suffix_2 { padding-right:16.667%; }
+.grid_12 .suffix_3 { padding-right:25.0%; }
+.grid_12 .suffix_4 { padding-right:33.333%; }
+.grid_12 .suffix_5 { padding-right:41.667%; }
+.grid_12 .suffix_6 { padding-right:50.0%; }
+.grid_12 .suffix_7 { padding-right:58.333%; }
+.grid_12 .suffix_8 { padding-right:66.667%; }
+.grid_12 .suffix_9 { padding-right:75.0%; }
+.grid_12 .suffix_10 { padding-right:83.333%; }
+.grid_12 .suffix_11 { padding-right:91.667%; }
+
+.grid_12 .push_1 { left:8.333%; }
+.grid_12 .push_2 { left:16.667%; }
+.grid_12 .push_3 { left:25.0%; }
+.grid_12 .push_4 { left:33.333%; }
+.grid_12 .push_5 { left:41.667%; }
+.grid_12 .push_6 { left:50.0%; }
+.grid_12 .push_7 { left:58.333%; }
+.grid_12 .push_8 { left:66.667%; }
+.grid_12 .push_9 { left:75.0%; }
+.grid_12 .push_10 { left:83.333%; }
+.grid_12 .push_11 { left:91.667%; }
+
+.grid_12 .pull_1 { left:-8.333%; }
+.grid_12 .pull_2 { left:-16.667%; }
+.grid_12 .pull_3 { left:-25.0%; }
+.grid_12 .pull_4 { left:-33.333%; }
+.grid_12 .pull_5 { left:-41.667%; }
+.grid_12 .pull_6 { left:-50.0%; }
+.grid_12 .pull_7 { left:-58.333%; }
+.grid_12 .pull_8 { left:-66.667%; }
+.grid_12 .pull_9 { left:-75.0%; }
+.grid_12 .pull_10 { left:-83.333%; }
+.grid_12 .pull_11 { left:-91.667%; }
+
+
+
+
+
+/* Fraction grid
+   ------------- */
+
+.size1of1 {
+    width: 100%; /* ??? Need it (or just rename it) ??? */
+}
+
+/* Halves */
+
+.size1of2,
+.size3of6,
+.size2of4 {
+    width: 50%;
+}
+
+/* size#of3 */
+
+.size1of3 {
+    width: 33.333%;
+    /* New age */
+	width: -moz-calc( 1/3 * 100% );
+	width: -o-calc( 1/3 * 100% );
+	width: -webkit-calc( 1/3 * 100% );
+	width: calc( 1/3 * 100% );
+}
+
+.size2of3 {
+    width: 66.667%;
+    /* New age */
+	width: -moz-calc( 2/3 * 100% );
+	width: -o-calc( 2/3 * 100% );
+	width: -webkit-calc( 2/3 * 100% );
+	width: calc( 2/3 * 100% );
+}
+
+/* size#of4 */
+
+.size1of4 {
+    width: 25%;
+}
+
+.size3of4 {
+    width: 75%;
+}
+
+/* size#of5 */
+
+.size1of5 {
+    width: 20%;
+}
+
+.size2of5 {
+    width: 40%;
+}
+
+.size3of5 {
+    width: 60%;
+}
+
+.size4of5 {
+    width: 80%;
+}
+
+/* size#of6 */
+
+.size1of6 {
+    width: 16.667%;
+    /* New age */
+	width: -moz-calc( 1/6 * 100% );
+	width: -o-calc( 1/6 * 100% );
+	width: -webkit-calc( 1/6 * 100% );
+	width: calc( 1/6 * 100% );
+}
+
+.size2of6 {
+    width: 33.333%;
+    /* New age */
+	width: -moz-calc( 2/6 * 100% );
+	width: -o-calc( 2/6 * 100% );
+	width: -webkit-calc( 2/6 * 100% );
+	width: calc( 2/6 * 100% );
+}
+
+.size4of6 {
+    width: 66.667%;
+    /* New age */
+	width: -moz-calc( 4/6 * 100% );
+	width: -o-calc( 4/6 * 100% );
+	width: -webkit-calc( 4/6 * 100% );
+	width: calc( 4/6 * 100% );
+}
+
+.size5of6 {
+    width: 83.333%;
+    /* New age */
+	width: -moz-calc( 5/6 * 100% );
+	width: -o-calc( 5/6 * 100% );
+	width: -webkit-calc( 5/6 * 100% );
+	width: calc( 5/6 * 100% );
+}
+
+
+/* coloring */
+
+.grid_fraction .cell {
+    display: inline;
+    float: left;
+    position: relative;
+    
+    background: hsla( 0, 0%, 0%, 0.2 );
+    font: 12px arial;
+    color: white;
+    overflow: hidden;
+}
+
+
+
+
+
+
+/* Auto splitter
+   ------------- */
+/* Auto block splitter */
+
+/* one item */
+.splitter li:first-child:nth-last-child(1) {
+    width: 100%;
+}
+
+/* two items */
+.splitter li:first-child:nth-last-child(2),
+.splitter li:first-child:nth-last-child(2) ~ li {
+    width: 50%;
+}
+
+/* three items */
+.splitter li:first-child:nth-last-child(3),
+.splitter li:first-child:nth-last-child(3) ~ li {
+    width: 33.3333%;
+    width: -moz-calc( 100% / 3 );
+    width: -o-calc( 100% / 3 );
+    width: -webkit-calc( 100% / 3 );
+}
+
+/* four items */
+.splitter li:first-child:nth-last-child(4),
+.splitter li:first-child:nth-last-child(4) ~ li {
+    width: 25%;
+}
+
+.splitter li:first-child:nth-last-child(5),
+.splitter li:first-child:nth-last-child(5) ~ li {
+    width: 20%;
+}
+
+.splitter li:first-child:nth-last-child(6),
+.splitter li:first-child:nth-last-child(6) ~ li {
+    width: 16.6667%;
+    width: -moz-calc( 100% / 6 );
+    width: -o-calc( 100% / 6 );
+    width: -webkit-calc( 100% / 6 );
+}
+
+.splitter li:first-child:nth-last-child(7),
+.splitter li:first-child:nth-last-child(7) ~ li {
+    width: 14.2857%;
+    width: -moz-calc( 100% / 7 );
+    width: -o-calc( 100% / 7 );
+    width: -webkit-calc( 100% / 7 );
+}
+
+.splitter li:first-child:nth-last-child(8),
+.splitter li:first-child:nth-last-child(8) ~ li {
+    width: 12.5%;
+}
+
+
+
+
+/* DELETE ME */
+
+
+.cell span {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    background: rgba( 255, 255, 255, 0.1 );
+}
+
+.splitter {
+    padding: 0;
+}
+.splitter li {
+    list-style-type: none;
+    background: #ccc;
+    text-align: center;
+}

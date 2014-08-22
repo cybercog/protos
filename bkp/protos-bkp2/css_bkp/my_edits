@@ -1,0 +1,30 @@
+/**
+ * Its better to be with for="" attribute
+ */
+
+label {
+    cursor: pointer;
+}
+
+/* vvv */
+
+label[for] {
+    cursor: pointer;
+}
+
+/* ==================================== */
+
+/**
+ * Make cursors more functional 
+ */
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/* vvv */
+
+abbr[title] {
+    border-bottom: 1px dashed;
+    cursor: help;
+}
