@@ -1,0 +1,29 @@
+<style>
+    body {
+        background-image: none;
+    }
+    
+    .warn {
+        color: rgba( 219, 14, 9, 1 );
+    }
+    
+    h1 {
+        background: rgba( 213, 228, 233, 1 );
+        color: rgba( 3, 71, 93, 1 );
+        padding-left: 24px;
+        padding-right: 24px;
+        position: relative;
+    }
+    
+    h1:after {
+        content: "";
+        display: block;
+        border: 20px solid transparent;
+        border-top-color: rgba( 213, 228, 233, 1 );
+        position: absolute;
+        bottom: -40px;
+        left: 24px;
+    }
+</style>
+
+<h1>Error №<span class="warn">404</span>: Page not found</h1>

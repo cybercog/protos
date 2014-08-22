@@ -1,0 +1,188 @@
+/*
+Theme Name: Protos wireframe
+Theme URI: http://wmcc.su/
+Description: Protos is constructing
+Version: 1.0
+Author: Komarev Anton [Pe Ell]
+Author URI: http://wmcc.su/member/4
+Tags: html5, css3, clean, basic, wireframe
+*/
+
+/* =============================================================================
+   Non-semantic helper classes
+   ========================================================================== */
+
+/* For image replacement */
+.ir {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+    *line-height: 0;
+}
+
+.ir br {
+    display: none;
+}
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visually_hidden {
+    border: 0;
+    clip: rect( 0 0 0 0 );
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visually_hidden.focusable:active,
+.visually_hidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+    visibility: hidden;
+}
+
+/* Contain floats: h5bp.com/q */
+.row:after,
+.row:before {
+    content: "";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.row {
+    zoom: 1;
+}
+
+.row.left>* {
+    float: left;
+}
+
+.row.right>* {
+    float: right;
+}
+
+ul.row {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cursor behavior */
+
+.help {
+    cursor: help;
+}
+
+/* Text transformation */
+
+.caps { /* .capitalize */
+    text-transform: capitalize;
+}
+
+.lowercase {  /* .lower || .lcase || .lc */
+    text-transform: lowercase;
+}
+
+.uppercase { /* .upper || .ucase || .uc */
+	text-transform: uppercase;
+}
+
+/* sandBox: custom */
+
+.picture { /* :TODO: (move to media) */
+    padding: 6px;
+    background: white;
+}
+
+.space_4 {
+    padding: 4px;
+}
+
+/* Figure action toolbar :TODO: (move to media)
+   --------------------- */
+   
+.actions {
+    background-color: hsla( 0, 0%, 100%, 0.85 );
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    border-radius: 2px;
+    /*display: none;*/
+    left: -1px;
+    position: absolute;
+    top: -26px;
+    padding: 1px;
+}
+
+    /* Display */
+    
+    figure:hover .actions {
+        display: block;
+    }
+    
+    /* Stylisation */
+    
+    .actions a:link,
+    .actions a:visited,
+    .actions span.link {
+        color: crimson;
+        text-decoration: none;
+        padding: 1px 7px;
+        display: block;
+    }    
+    
+    .actions a:hover,
+    .actions span.link:hover {
+        color: white;
+    }
+    
+    .actions li {
+        border-right: 1px solid #ccc;
+        box-shadow: inset 1px 1px 4px 1px hsla( 0, 0%, 0%, 0.05 ), /* inner: glow, dim, all */
+                    inset 0 0 1px 1px hsla( 0, 0%, 100%, 1 ), /* inner: stroke, white, all */
+                    inset 0 2px 0 0 hsla( 0, 0%, 0%, 0.04 ); /* inner: emboss, dark, top */
+    }
+    
+    .actions li:last-child {
+        border: 0;
+    }
+    
+    .actions li:hover {
+        background-color: crimson;
+    }
+
+/* NOTHING DELETE ME! */
+
+.bg {
+    background-color: hsla( 0, 0%, 89%, 1 );
+}
+
+.debug {
+    background-color: crimson;
+}
+
+/* ??? normalize */
